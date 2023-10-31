@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #navBar {
+            background-color: #7a1f4a;
+            padding: 10px 5px;
+        }
+
+        #navBar ul {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        #navBar li {
+
+            list-style: none;
+            padding: 5px 5px;
+            margin: 4px 5px;
+        }
+
+        #navBar a {
+            padding: 5px;
+            font-family: 'lacquer';
+            color: azure;
+            text-decoration: none;
+            transition: ease-in-out;
+        }
+
+        #navBar a:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid transparent;
+            border-radius: 5px;
+
+        }
+        .fa-snowflake{
+            color: white;
+            transition: all linear;
+            animation:  rot 2s linear infinite;
+        }
+        @keyframes rot {
+            0%{
+                transform:  rotate(0deg);
+            }
+            100%{
+                transform:  rotate(360deg);
+            }
+            
+        }
+
+        .firstImage {
+            max-height: 350px;
+        }
+
+        .firstImage img {
+            width: 100%;
+            height: 500px;
+        }
+
+        #heading-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #heading-1 h1 {
+            font-size: 56px;
+            color: white;
+            text-shadow: 2px 3px 5px black;
+            margin-top: -120px;
+            text-align: center;
+        }
+
+        #heading-1 p {
+            color: white;
+            font-family: cursive;
+            text-shadow: 2px 3px 5px #2c0e47;
+            font-size: 23px;
+            line-height: 60px;
+        }
+
+        #heading-1 span {
+            color: yellow;
+        }
+
+        .mission {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(29, 26, 26);
+            width: 100%;
+            height: 600px;
+            margin-top: 146px;
+        }
+
+        #mission {
+            padding: 10px;
+            font-size: 40px;
+            font-family: math;
+            color: #f65494;
+            text-shadow: 2px 1px 0px #ff1515;
+        }
+
+        #missionContent {
+            display: flex;
+            justify-content: flex-end;
+            color: azure;
+            padding: 13px;
+            margin: 12px;
+        }
+
+        #missionContent p {
+            font-family: monospace;
+            font-size: 18px;
+            margin: 12px;
+            padding: 12px;
+            /* border: 2px solid white; */
+            height: 400px;
+            width: 400px;
+            font-family: monospace;
+            color: #ddddb8;
+        }
+
+        #drinks {
+            width: 100%;
+    /* max-width: 850px; */
+    display: flex;
+    margin-top: -59px;
+    /* justify-self: center; */
+    justify-content: center;
+        }
+
+        #drinks img {
+            max-width: 807px;
+    height: 500px;
+        }
+        #drinksContent{
+            margin-left: 148px;
+    font-family: cursive;
+    /* text-align: center; */
+    margin-top: -79px;
+    color: #ebdfd4;
+    /* text-shadow: 2px 3px 5px #2c0e47; */
+    font-size: 57px;
+    animation-name: content;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+    
+        
+        @keyframes content {
+            0%{
+                text-shadow: none;
+                
+            }
+            100%{
+               text-shadow: 6px 5px 5px red;
+            }
+            
+        }
+       
+        .dish{
+            width: 100%;
+            display: flex;
+            /* flex-direction: column; */
+            
+        }
+        .dish1-3{
+            width: 50%;
+           margin-left: 0;
+        }
+        .dish2-4{
+            width: 50%;
+            margin-right: 0;
+           
+        }
+        #dish-1{
+            /* padding: 13px; */
+            position: absolute;
+            animation-name: dish;
+            animation-duration: 90s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            /* animation-duration: 5s; */
+        }
+        #dish-3 img{
+            width: 327px;
+            margin-top: 383px;
+    margin-left: 185px;
+    position: absolute;
+            animation-name: dish;
+            animation-duration: 90s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        #dish-2 img{
+            width: 398px;
+            position: absolute;
+            animation-name: dish;
+            animation-duration: 90s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }
+        #dish-4 img{
+            width: 400px;
+            position: absolute;
+            margin-top: 383px;
+    margin-right: 185px;
+            animation-name: dish;
+            animation-duration: 90s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes dish {
+            
+            100%{
+                transform: rotate(360deg);
+
+            }
+            
+        }
+        #menu{
+            display: flex;
+            flex-direction: column;
+            margin-top: 900px;
+        }
+        #menuContent{
+                color: #f18c7a;
+    font-size: 106px;
+    text-align: end;
+    font-family: cursive;
+        }
+        #menuContentImg{
+            display: flex;
+        }
+        .menuBox{
+            width: 250px;
+            height: 500px;
+            
+        }
+        .menuBox img{
+            width: 250px;
+            height: 500px;
+           
+            cursor: pointer;
+            position: absolute;
+            z-index: -1;
+                transition: .55s;
+        }
+        #menu1,#menu2,#menu3,#menu4,#menu5{
+             filter: brightness(50%);
+        }
+        #menu1:hover{
+            
+            filter: brightness(1);
+        }
+        #menu2:hover{
+            
+            filter: brightness(1);
+        }
+        #menu3:hover{
+            
+            filter: brightness(1);
+        }
+        #menu4:hover{
+            
+            filter: brightness(1);
+        }
+        #menu5:hover{
+            
+            filter: brightness(1);
+        }
+        .menuBox p{
+                   color: azure;
+    font-size: 24px;
+    margin-top: 194px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    
+        }
+        #menu1{
+            margin: 12px;
+        
+       animation: menu1float 7s infinite alternate-reverse ease-in-out;
+       position: relative;
+
+}
+@keyframes menu1float{
+    0%{
+        transform: translateY(-1%);
+    }
+    100%{
+        transform: translateY(6%);
+    }
+ }
+    
+    
+
+        
+        
+        #menu2{
+            margin: 12px;
+          animation: menu1float 4s infinite alternate-reverse ease-in-out;
+        }
+         
+        #menu3{
+            margin: 12px;
+            animation: menu1float 6s infinite alternate-reverse ease-in-out;
+          
+        }
+          
+
+        #menu4{
+            margin: 12px;
+            animation: menu1float 10s infinite alternate-reverse ease-in-out;
+        }
+        #menu5{
+            margin: 12px;
+          animation: menu1float 8s infinite alternate-reverse ease-in-out;
+        }
+        
+        .menuBox a{
+            text-decoration: none;
+        }
+
+        footer{
+           padding: 46px;
+    color: azure;
+    margin-top: 45px;
+    width: auto;
+    height: 100px;
+    background-color: #f18c7a;;
+    text-align: center;
+    font-size: 17px;
+    font-family: cursive;
+        }
+
+        @media screen and (min-width:934px) and (max-width:1239px) {
+            #navBar {
+    width: 108%;
+            }
+            .firstImage img {
+    width: 108%;
+            }
+            .mission{
+                width: 108%;
+            }
+            footer{
+                width: 108%;
+            }
+            
+        }
+        @media screen and (min-width:799px) and (max-width:934px) {
+            #navBar {
+    width: 113%;
+            }
+            .firstImage img {
+    width: 113%;
+            }
+            .mission{
+                width: 113%;
+            }
+            footer{
+                width: 113%;
+            }
+            #drinks img{
+                    margin-left: 112px;
+    width: 733px;
+            }
+            #missionContent p{
+                margin: none;
+                margin-right: 47px;
+
+            }
+            #missionContent #para2{
+                display: none;
+            }
+
+            
+        }
+        @media screen and (min-width:600px) and (max-width:799px) {
+            #navBar {
+    width: 125%;
+            }
+            #navBar ul {
+    margin-left: -9px;
+            }
+            .firstImage img {
+    width: 125%;
+            }
+            .mission{
+                width: 125%;
+            }
+            footer{
+                    width: 125%;
+    height: 123px;
+    font-size: 13px;
+            }
+            footer p{
+                margin-left: -44px;
+
+            }
+            #drinks img{
+                    margin-left: 156px;
+    width: 733px;
+            }
+            #missionContent p{
+                margin: none;
+                margin-right: 114px;
+
+            }
+            #missionContent #para2{
+                display: none;
+            }
+            .menuBox p {
+                text-align: start;
+            }
+            #menuContent {
+                text-align: center;
+            }
+            #heading-1 h1{
+                margin-left: 173px;
+            }
+            #heading-1 p {
+                margin-left: 154px;
+            }
+            .dish1-3{
+                margin-left: -62px;
+            }
+
+
+            
+        }
+        @media screen and (min-width:499px) and (max-width:600px) {
+            #navBar {
+    width: 179%;
+            }
+            #navBar ul {
+    margin-left: 1px;
+            }
+            .firstImage img {
+    width: 179%;
+            }
+            .mission{
+                width: 179%;
+                margin-top: 73px;
+            }
+            footer{
+             width: 179%;
+    height: 129px;
+    font-size: 13px;
+            }
+            footer p{
+                margin-left: -44px;
+
+            }
+            #drinks img{
+       margin-left: 390px;
+   
+    width: 190%;
+            }
+            #missionContent p{
+                margin: none;
+                margin-right: 114px;
+                width: 100%;
+                font-size: 23px;
+
+            }
+            #missionContent #para2{
+                display: none;
+            }
+            .menuBox p {
+                text-align: start;
+            }
+
+            .menuBox img {
+    width: 414px;
+            }
+            
+            #menuContent {
+                text-align: right;
+            }
+            #heading-1 h1{
+                margin-left: 366px;
+            }
+            #heading-1 p {
+                margin-right: -355px;
+            }
+            .dish1-3{
+                margin-left: -43px;
+            }
+            .dish{
+                flex-direction: row-reverse;
+            }
+
+
+            
+        }
+
+       
+        
+    </style>
+</head>
+<body>
+  
+<nav id="navBar">
+    
+        <ul>
+            <i class="fa-solid fa-snowflake"></i>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Registration</a></li>
+            <!-- <li><a href="">Blog</a></li> -->
+            <li><a href="/reservation">Reservation</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <!-- <li><a href="">Events</a></li> -->
+             <i class="fa-solid fa-snowflake"></i>
+        </ul>
+       
+    </nav>
+    <div class="firstImage">
+        <img src="img/first.jpg" alt="">
+    </div>
+
+    <div id="heading-1">
+        <h1 data-value="FIDALGO">FIDALGO</h1>
+        <p>The Ultimate All Cuisine <span>Restaurant</span></p>
+    </div>
+
+
+    <div class="mission">
+        <div id="mission">Our Mission</div>
+        <div id="missionContent">
+
+            <p>Looking for the best restaurant in Birmingham, Michigan? Look no further than Fidalgo, nestled in the
+                Victorian Peabody Mansion. Executive Chef Lloyd Roberts brings years of experience and innovation to the
+                kitchen, creating an array of gastronomic adventures for guests to enjoy.
+
+                At Fidalgo, we offer a diverse menu of small and large plates, specialty craft cocktails, and all sorts
+                of cuisine. We source the freshest ingredients from both local and international markets, ensuring our
+                guests taste our heartfelt commitment to quality.</p>
+            <p id="para2">Fidalgo sets itself apart by prioritizing the social experience and taking a vibe-driven approach to fine
+                dining. Our chic ambiance and decor in the dining room, sushi lounge, and cocktail bar create a fun and
+                stylish atmosphere.
+
+                Join us for dinner, cocktails, a private party, or any special occasion. Fidalgo promises world-class
+                hospitality, making your visit special and memorable. Discover why Fidalgo is the perfect destination
+                for all-cuisine in Birmingham, Michigan.</p>
+
+
+        </div>
+    </div>
+    <div id="drinks">
+        <img src="img/drinks.jpg" alt="">
+    </div>
+    <div id="drinksContent">
+        <div id="drinksContent-1">Stylish and</div>
+        <div id="drinksContent-2"> Flavorful</div>
+        <div id="drinksContent-3">Components</div>
+       
+        
+    </div>
+
+    <div class="dish">
+        <div class="dish1-3">
+
+        <div id="dish-1">
+            <img src="img/dish-1.png" alt="">
+        </div>
+        <div id="dish-3">
+            <img src="img/dish-3.png" alt="">
+        </div>
+        </div>
+
+        <div class="dish2-4">
+            <div id="dish-2">
+                <img src="img/dish-2.png" alt="">
+            </div>
+            <div id="dish-4">
+                <img src="img/dish-4.png" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="menu">
+        <div id="menuContent">
+            View Our Menu
+        </div>
+        <div id="menuContentImg">
+            <div class="menuBox" id="menu1">
+                <img src="img/delivery.jpg" alt="">
+                <a href="https://google.com" target="_blank"><p>DELIVERY MENU</p></a>
+                
+            </div>
+            <div class="menuBox" id="menu2">
+                <img src="img/dining.jpeg" alt="">
+                <a href="https://google.com" target="_blank"><p>DINING MENU</p></a>
+               
+
+            </div>
+            <div class="menuBox" id="menu3">
+                <img src="img/drinksMenu.jpg" alt="">
+                <a href="https://google.com" target="_blank"><p>DRINKS MENU</p></a>
+                
+
+            </div>
+            <div class="menuBox" id="menu4">
+                <img src="img/happyHour.jpg" alt="">
+                 <a href="https://google.com" target="_blank"><p>HAPPY HOUR</p></a>
+                
+
+            </div>
+            <div class="menuBox" id="menu5">
+                <img src="img/dessert.jpg" alt="">
+                <a href="https://google.com" target="_blank"><p>DESSERT MENU</p></a>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footerContent">
+          <p>  SUNDAY - THURSDAY: 11:30AM - 11PM | FRIDAY and SATURDAY: 11:30AM - 11:59PM</p>
+          <p>325 S OLD WOODWARD | BIRMINGHAM, MI 48009 | COPYRIGHT 2023 </p>
+        </div>
+        
+    </footer>
+
+    <script src="/javascript/index.js"> 
+        
+    </script>
+    
+</body>
+</html>

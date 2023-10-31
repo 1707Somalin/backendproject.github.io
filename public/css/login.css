@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    place-items: center;
+    /* background: black; */
+}
+.login{
+    display: flex;
+}
+.loginImg img{
+    align-items: center;
+    justify-content: center;
+    width: 150%;
+height: 517px;
+}
+.loginImg p{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: right;
+    color: yellow;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: -266px;
+}
+.card{
+    aspect-ratio: 1/1.6;
+    /* border: 0.5vmin solid black;  */
+    cursor: pointer;
+    position: relative;
+    width: 56vmin;
+}
+.card:before{
+    background: linear-gradient(130deg,transparent 0% 33%,black 66%, rgb(131, 51, 131) 83.5%,rgb(226, 45, 114) 100%);
+    background-position: 50% 50%;
+    background-size: 300% 300%;
+    content: "";
+    font-size: 32px;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    transition: background-position 350ms ease;
+}
+.card:hover:before{
+    background-position: 100% 100%;
+    transform: scale(1.08,1.03);
+}
+.card-content{
+    background: radial-gradient(rgba(255,255,255,0.2) 8%, transparent 8%);
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    transition: background-position 350ms ease;
+    width: calc(100% - 10vmin);
+    width: calc(100% - 10vmin);
+    padding: 5vmin;
+    z-index: 2;
+    position: relative;
+
+}
+.card-content p{
+    color: white;
+    margin: 5px;
+    margin-left: 2px;
+}
+.card-content a{
+    /* text-decoration: none ; */
+    color: white;
+}
+.card:hover > .card-content{
+    background-position: -10% 0%;
+}
+.card-title,
+.card-subtitle{
+    color: white;
+    font-family:sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+.card-title{
+    font-size: 6vmin;
+}
+.card-subtitle{
+    /* font-size: 3vmin; */
+    margin-top: 2vmin;
+}
+.card-subtitle-word{
+    display: inline-block;
+    margin: 0vmin 0.3vmin;
+    position: relative;
+    transform: translateY(40%);
+    transition: none;
+    opacity: 0;
+
+}
+.card:hover > .card-content > .card-subtitle > .card-subtitle-word{
+    transform: translateY(0%);
+    transition: opacity 0ms, transform 200ms cubic-bezier(.90,.06,.15,.90);
+    opacity: 1;
+
+}
+.card form{
+    height: 487px;
+color: white;
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 2px solid rgba(255, 255, 255, 0.3);
+box-shadow: 2px 5px 9px rgba(0, 0, 0, 0.9);
+
+}
+.card form input{
+    color: beige;
+width: 60%;
+padding: 12px;
+margin: 13px;
+outline: none;
+background-color: rgba(0,0,0,0.1);
+}
+#loginbtn{
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+         #navBar {
+            background-color: #52283c;
+            padding: 10px 5px;
+        }
+
+        #navBar ul {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        #navBar li {
+
+            list-style: none;
+            padding: 5px 5px;
+            margin: 4px 5px;
+        }
+
+        #navBar a {
+            padding: 5px;
+            font-family: 'lacquer';
+            color: azure;
+            text-decoration: none;
+            transition: ease-in-out;
+        }
+
+        #navBar a:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid transparent;
+            border-radius: 5px;
+
+        }
+         .fa-snowflake{
+            color: white;
+            transition: all linear;
+            animation:  rot 2s linear infinite;
+        }
+        @keyframes rot {
+            0%{
+                transform:  rotate(0deg);
+            }
+            100%{
+                transform:  rotate(360deg);
+            }
+            
+        }
+        .register{
+        width: 1000px;
+    height: 585px;
+    display: flex;
+    background: linear-gradient(130deg,black -34%, rgb(131, 51, 131) 63.5%,rgb(226, 45, 114) 100%);
+    margin: 100px auto;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 112px;
+    border-bottom-left-radius: 112px;
+    box-shadow: 7px 8px rgba(0,0,0,0.8);
+}
+
+        
+        #registerContent{
+            width: 40%;
+            text-align: center;
+            
+
+        }
+        #registerContent span{
+            color: white;
+            font-size: 32px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #registerContent p,a{
+            color: white;
+        }
+        #form{
+          display: flex;
+        }
+        
+        #registerForm{
+            width: 60%;
+            /* display: flex; */
+            /* justify-content: center; */
+        }
+        #registerForm input div {
+            width: 200px;
+           
+        }
+        #registerForm input{
+               color: white;
+    background-color: rgba(0,0,0,0.3);
+    padding: 13px;
+    margin: 12px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #dca6cf;
+        }
+        #registerForm  #radio{
+            height: 70px;
+            margin-left: 30px;
+            color: white;
+        }
+        #registerFormHeading span{
+            position: absolute;
+    margin-top: -74px;
+    margin-left: 10px;
+            font-size: 30px;
+            color: white;
+            font-family: monospace;
+        }
+        #registerForm-1{
+            display: flex;
+            flex-direction: column;
+        }
+        #registerForm-2{
+            display: flex;
+            flex-direction: column;
+        }
+        #registerForm .submit{
+            cursor: pointer;
+                
+    
+    height: 39px;
+    background-color: white;
+    color: blue;
+    margin-left: 127px;
+        }
+        footer{
+       padding: 35px;
+    color: azure;
+    margin-top: 45px;
+    width: auto;
+    height: 66px;
+    background-color: #3d2d3a;
+    text-align: center;
+    font-size: 15px;
+    font-family: cursive;
+        }
+         @media  screen  and (min-width:930px) and (max-width:1039px) {
+            .register{
+                width: 900px;
+            }
+            
+        }
+        @media  screen and (min-width:739px) and (max-width:930px) {
+            .register{
+                width: 700px;
+            }
+            
+        }
+        @media  screen and (min-width:588px) and (max-width:739px) {
+            .register{
+                width: 565px;
+            }
+            #registerFormHeading span{
+                font-size: 25px;
+            }
+            #registerContent span {
+                font-size: 20px;
+            }
+            #registerContent p, a{
+                font-size: 15px;
+            }
+            
+        }
+        @media  screen and (min-width:450px) and (max-width:588px) {
+            .register{
+                width: 427px;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            #registerFormHeading span{
+                margin-top: -45px;
+                font-size: 21px;
+            }
+            #registerContent span {
+                font-size: 20px;
+            }
+            #registerContent p, a{
+                font-size: 15px;
+            }
+            
+        }
+        @media  screen and (min-width:399px) and (max-width:450px) {
+            #navBar {
+                width: 441px;
+            }
+            footer {
+                width: 381px;
+            }
+            .register {
+    width: 408px;
+        flex-direction: column-reverse;
+        background: none;
+        border: none;
+        box-shadow: none;
+            }
+            #registerFormHeading span {
+                color: #541919;
+                font-size: 24px;
+
+            }
+            #registerContent span {
+    color: #7c2f2f;
+    font-size: 32px;
+            }
+            #registerContent p, a {
+    color: #805454;
+}
+#registerForm input {
+background: linear-gradient(130deg,black -34%, rgb(131, 51, 131) 63.5%,rgb(226, 45, 114) 100%);
+}
+#registerForm .submit{
+    color: white;
+}
+#registerForm #radio {
+    color: #854d4d;
+
+}
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav id="navBar">
+        <ul>
+              <i class="fa-solid fa-snowflake"></i>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Registration</a></li>
+            <!-- <li><a href="">Blog</a></li> -->
+            <li><a href="/reservation">Reservation</a></li>
+            <!-- <li><a href="">Events</a></li> -->
+              <i class="fa-solid fa-snowflake"></i>
+        </ul>
+    </nav>
+    <div class="register">
+        <div id="registerContent">
+            <span>Welcome to Fidalgo!</span>
+            <p>Already Registered ?</p><a href="/login">Login</a>
+            
+        </div>
+
+        <div id="registerFormHeading">
+            <span>Register Here...</span>
+            <div id="registerForm">
+                <form action="/register" method="POST">
+                    <div id="form">
+                    <div id="registerForm-1">
+                       
+                            <div><input type="text" name="firstname" placeholder="First name"></div>
+                            <div><input type="email" name="email" placeholder="Your email"></div>
+                            <div><input type="phone" name="phone" placeholder="Phone Number"></div>
+                          <div>  <input type="password" name="password" placeholder="Password"></div>
+                        
+        
+                    </div>
+
+                    <div id="registerForm-2">
+                       
+                            <div><input type="text" name="lastname" placeholder="Last name"></div>
+                           <div id="radio"> Male<input type="radio" name="gender" value="male"> Female<input type="radio" name="gender" value="female"></div>
+                           <div> <input type="text" name="age" placeholder="Your Age"></div>
+                            <div><input type="password" name="confirmpassword" placeholder="Confirm Password"></div>
+                            <div><input type="submit" class="submit" value="Register"></div>
+                      
+        
+                    
+        
+                </div>
+            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     <footer>
+        <div id="footerContent">
+          <p>  SUNDAY - THURSDAY: 11:30AM - 11PM | FRIDAY and SATURDAY: 11:30AM - 11:59PM</p>
+          <p>325 S OLD WOODWARD | BIRMINGHAM, MI 48009 | COPYRIGHT 2023 </p>
+        </div>
+        
+    </footer>
+</body>
+</html>
